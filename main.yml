@@ -1,15 +1,23 @@
 ---
-- hosts: all
-  become: yes
-  vars:
-   ansible_winrm_transport: ntlm
-   ansible_connection: winrm
-   ansible_winrm_scheme: http
-   ansible_port: 5985
+- hosts: localhost
+  gather_facts: yes
   tasks:
-  - name: include roles for validate dotnet
-  include_role: 
-   name: validate
-   ignore_errors: yes
-   tags: validate
+  - include_role:
+      name: validate
+
+#---
+#- hosts: all
+#  become: yes
+#  vars:
+#   ansible_winrm_transport: ntlm
+#   ansible_connection: winrm
+#   ansible_winrm_scheme: http
+#   ansible_port: 5985
+#  tasks:
+#  - name: include roles for validate dotnet
+#  include_role: 
+#   name: validate
+#   ignore_errors: yes
+#   tags: validate
+   
   
