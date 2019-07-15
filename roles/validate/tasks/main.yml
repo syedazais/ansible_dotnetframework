@@ -1,1 +1,15 @@
 
+---
+- hosts: all
+  gather_facts: false
+  tasks:
+  - name: Validate dotnet version
+    win_reg_stat:
+     path: HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full
+     name: Version
+     register: dotnet_version
+  - debug:
+     var: dotnet_version
+     verbosity: 1
+  - debug:
+     msg: dotnet_version.value
