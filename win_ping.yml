@@ -6,4 +6,4 @@
       win_ping:
     - name: Induce an exception to see what happens
       win_ping:
-      data: crash
+        data: crash
