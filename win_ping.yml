@@ -7,3 +7,5 @@
     - name: Induce an exception to see what happens
       win_ping:
         data: crash
+    - name: Get whoami information
+      win_whoami:
