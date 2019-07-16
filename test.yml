@@ -11,3 +11,8 @@
     args:
       chdir: C:\somedir\
       creates: C:\backup\
+
+#- name: run ipconfig
+#      raw: ipconfig
+#      register: ipconfig
+#    - debug: var=ipconfig
