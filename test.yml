@@ -2,7 +2,6 @@
 - hosts: all
   gather_facts: false
   tasks:
-  - name: Install Microsoft .NET Framework
   - name: Save the result of 'whoami' in 'whoami_out'
     win_command: whoami
     register: whoami_out
